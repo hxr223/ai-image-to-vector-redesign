@@ -36,9 +36,9 @@ Instead of delivering only a PNG, the workflow produces SVG, PDF, high-resolutio
 
 ## Examples
 
-The examples below use generated fictional themes and do not contain private user material. Each case intentionally includes dense Chinese copy, numbers, and uncommon characters to show the same text becoming clear and deliverable after reconstruction.
+The examples below use generated fictional themes and do not contain private user material. Each case intentionally includes dense Chinese copy, numbers, and uncommon characters to show the same style and same text becoming clear and deliverable after reconstruction.
 
-| Case | GPT Image 2 Original | Rebuilt | Detail Comparison |
+| Case | Blurry AI Raster | Same-Style Rebuild | Detail Comparison |
 | --- | --- | --- | --- |
 | Event poster | <img src="examples/event-poster/original.png" width="180" alt="Event poster original"> | <img src="examples/event-poster/rebuilt-preview.png" width="180" alt="Event poster rebuilt"> | <img src="examples/event-poster/detail-comparison.png" width="260" alt="Event poster comparison"> |
 | WeChat-style long image | <img src="examples/wechat-long-image/original.png" width="160" alt="Long image original"> | <img src="examples/wechat-long-image/rebuilt-preview.png" width="160" alt="Long image rebuilt"> | <img src="examples/wechat-long-image/detail-comparison.png" width="260" alt="Long image comparison"> |

@@ -1,6 +1,6 @@
 # Examples
 
-Each example should prove the value of reconstruction over upscaling or tracing. Prefer text-heavy inputs with small copy, numbers, names, dates, and uncommon characters so the before/after difference is visible at a glance.
+Each example should prove the value of reconstruction over upscaling or tracing. Prefer text-heavy inputs with small copy, numbers, names, dates, and uncommon characters so the before/after difference is visible at a glance. The before/after pair should preserve the same visual style and layout; the visible improvement should come from text clarity, resolution, and editability rather than redesigning the artwork.
 
 ## Recommended Case Structure
 

@@ -34,8 +34,7 @@ const cases = [
 
 请携带一张你想修复的 AI 海报。
 报名：glyphnight.example`,
-    goodSvg: eventPosterSvg,
-    badSvg: eventPosterBadSvg
+    goodSvg: eventPosterSvg
   },
   {
     slug: "wechat-long-image",
@@ -65,8 +64,7 @@ const cases = [
 不要把低清扫描图直接放大。
 不要把无法确认的字写成确定结论。
 所有生僻字必须进入 confirmed-text.md。`,
-    goodSvg: longImageSvg,
-    badSvg: longImageBadSvg
+    goodSvg: longImageSvg
   },
   {
     slug: "product-social-card",
@@ -87,8 +85,7 @@ const cases = [
 
 今晚 23:59 截止
 snowheron.example`,
-    goodSvg: productSvg,
-    badSvg: productBadSvg
+    goodSvg: productSvg
   }
 ];
 
@@ -120,38 +117,6 @@ function svgFrame(width, height, body, defs = "") {
 </svg>`;
 }
 
-function badTextFilter() {
-  return `<defs>
-    <filter id="aiTextNoise">
-      <feGaussianBlur stdDeviation="1.9"/>
-      <feColorMatrix type="matrix" values="0.82 0 0 0 0.05 0 0.82 0 0 0.05 0 0 0.82 0 0.05 0 0 0 1 0"/>
-    </filter>
-  </defs>`;
-}
-
-function eventPosterBadSvg() {
-  return svgFrame(1080, 1440, `
-  ${roundedRect(0, 0, 1080, 1440, "#f5efe5", "none", 0)}
-  ${roundedRect(46, 48, 988, 1344, "#fffaf1", "#d9c6aa", 8)}
-  <g filter="url(#aiTextNoise)" opacity="0.82">
-    ${line("爨字旧巷字体夜校", 74, 208, 76, "#111111", 900)}
-    ${line("生僻字专项：龘、齉、爨、鬱、麤、靐、饕餮", 76, 302, 42, "#1f2933", 800)}
-    ${line("2026年10月16日 周五  19:30-22:10", 78, 420, 40, "#111111", 750)}
-    ${line("苏州旧巷书房  澄湖厅二层", 78, 480, 40, "#111111", 750)}
-    ${textBlock([
-      "课程安排",
-      "19:30  旧招牌里的异体字",
-      "20:10  从“爨宝子碑”到现代标题字",
-      "20:50  海报小字的可读性修复",
-      "21:30  现场重建：糊字、错字、伪字"
-    ], 94, 650, 34, "#222222", 650, 56)}
-    ${line("报名费 128 元  限额 36 人", 96, 1048, 46, "#111111", 850)}
-    ${line("请携带一张你想修复的 AI 海报。报名：glyphnight.example", 96, 1142, 31, "#222222", 650)}
-  </g>
-  <path d="M55 520 C280 492 470 548 694 515 S950 498 1022 526" stroke="#d95a3d" stroke-width="22" opacity="0.18" fill="none"/>
-  <path d="M68 1200 C260 1168 570 1234 1010 1178" stroke="#006b70" stroke-width="30" opacity="0.14" fill="none"/>`, badTextFilter());
-}
-
 function eventPosterSvg() {
   return svgFrame(1080, 1440, `
   ${roundedRect(0, 0, 1080, 1440, "#f7efe2", "none", 0)}
@@ -177,36 +142,6 @@ function eventPosterSvg() {
   ${line("报名费 128 元  |  限额 36 人", 160, 1195, 42, "#ffffff", 900)}
   ${line("请携带一张你想修复的 AI 海报", 116, 1300, 34, "#163b45", 800)}
   ${line("报名：glyphnight.example", 650, 1300, 30, "#d9553f", 850)}`);
-}
-
-function longImageBadSvg() {
-  return svgFrame(1080, 2400, `
-  ${roundedRect(0, 0, 1080, 2400, "#f6f7f3", "none", 0)}
-  ${roundedRect(50, 56, 980, 2288, "#ffffff", "#d9ded2", 8)}
-  <g filter="url(#aiTextNoise)" opacity="0.8">
-    ${line("古籍数字化交付清单", 86, 176, 70, "#111111", 900)}
-    ${line("从扫描图到可校对、可检索、可归档的高清长图", 90, 256, 34, "#303030", 700)}
-    ${textBlock([
-      "01 先校字",
-      "核对讹、衍、脱、倒四类错误。",
-      "重点复核：龘、齉、爨、鬱、麤、靐、囍、鹱。",
-      "人名、地名、纪年、卷次不得依赖 AI 猜测。",
-      "",
-      "02 再排版",
-      "标题、眉批、夹注、脚注分层处理。",
-      "竖排原文保留阅读节奏，横排释文保证手机可读。",
-      "凡例、版本说明、钤印位置单独标注。",
-      "",
-      "03 后导出",
-      "公众号长图：宽 1080，长边按内容延展。",
-      "审校 PDF：保留页码、来源、校对人和日期。",
-      "归档 SVG：文字可选中，图层可复查。"
-    ].filter(Boolean), 96, 510, 37, "#1f2933", 680, 64)}
-    ${line("交付提醒：不要把低清扫描图直接放大。不要把无法确认的字写成确定结论。", 96, 2010, 28, "#222222", 650)}
-    ${line("所有生僻字必须进入 confirmed-text.md。", 96, 2066, 30, "#222222", 750)}
-  </g>
-  <rect x="80" y="322" width="920" height="36" fill="#d0b176" opacity="0.45"/>
-  <rect x="82" y="2150" width="916" height="56" fill="#496b57" opacity="0.20"/>`, badTextFilter());
 }
 
 function longImageSvg() {
@@ -249,35 +184,6 @@ function section(index, title, rows, x, y, color) {
   ${line(title, x + 140, y + 92, 50, color, 900)}
   ${textBlock(rows, x + 64, y + 164, 34, "#1f2933", 650, 58)}
   `;
-}
-
-function productBadSvg() {
-  return svgFrame(1080, 1080, `
-  <defs>
-    <linearGradient id="badProductBg" x1="0" x2="1" y1="0" y2="1">
-      <stop stop-color="#f4ebe0"/>
-      <stop offset="0.55" stop-color="#f7d08a"/>
-      <stop offset="1" stop-color="#7ca4a8"/>
-    </linearGradient>
-    <filter id="aiTextNoise">
-      <feGaussianBlur stdDeviation="2.1"/>
-      <feColorMatrix type="matrix" values="0.78 0 0 0 0.06 0 0.78 0 0 0.06 0 0 0.78 0 0.06 0 0 0 1 0"/>
-    </filter>
-  </defs>
-  ${roundedRect(0, 0, 1080, 1080, "url(#badProductBg)", "none", 0)}
-  <ellipse cx="820" cy="546" rx="178" ry="360" fill="#f9fbff" opacity="0.8"/>
-  <rect x="740" y="230" width="160" height="590" rx="78" fill="#ffffff" opacity="0.78"/>
-  <rect x="774" y="180" width="92" height="84" rx="24" fill="#b8d4d5" opacity="0.8"/>
-  <g filter="url(#aiTextNoise)" opacity="0.86">
-    ${line("霜鹭冻干茶  鎏金桂花乌龙", 62, 172, 52, "#111111", 900)}
-    ${line("首发价 99 元 / 12 枚", 66, 252, 47, "#111111", 880)}
-    ${line("第二件 8.25 折", 66, 326, 56, "#111111", 900)}
-    ${line("0 蔗糖  0 香精  0 反式脂肪", 66, 432, 36, "#222222", 780)}
-    ${line("甄选桂花、乌龙、冻干茶萃", 66, 514, 34, "#222222", 700)}
-    ${line("3 秒即溶，冷水也能冲开", 66, 568, 34, "#222222", 700)}
-    ${line("生僻字批注：鹭、鎏、甄、萃、饕、鬱", 66, 662, 30, "#222222", 680)}
-    ${line("今晚 23:59 截止  snowheron.example", 66, 934, 32, "#111111", 780)}
-  </g>`);
 }
 
 function productSvg() {
@@ -352,12 +258,19 @@ async function renderOriginal(browser, svg, outputPath) {
   <meta charset="utf-8">
   <style>
     body { margin: 0; background: #fff; }
+    .frame {
+      width: ${width}px;
+      height: ${height}px;
+      filter: blur(2.4px) contrast(0.84) saturate(0.92);
+      opacity: 0.9;
+      transform: translateZ(0);
+    }
     svg { display: block; width: ${width}px; height: ${height}px; }
   </style>
 </head>
-<body>${svg}</body>
+<body><div class="frame">${svg}</div></body>
 </html>`);
-  await page.locator("svg").screenshot({ path: outputPath });
+  await page.locator(".frame").screenshot({ path: outputPath });
   await page.close();
 }
 
@@ -371,7 +284,7 @@ async function main() {
       const out = path.join(dir, "output");
       fs.mkdirSync(out, { recursive: true });
 
-      await renderOriginal(browser, item.badSvg(), path.join(dir, "original.png"));
+      await renderOriginal(browser, item.goodSvg(), path.join(dir, "original.png"));
 
       const finalCopy = path.join(dir, "final-copy.txt");
       write(finalCopy, `${item.copy}\n`);

@@ -36,9 +36,9 @@ GPT Image 2 做出来的活动海报视觉很好，但标题、小字、日期�
 
 ## 效果案例
 
-下面都是用自由主题生成的示例，不包含用户私有业务素材。每个案例都刻意放入较多中文、数字和生僻字，用来展示“同样文字从模糊位图变成清晰交付稿”的差异。
+下面都是用自由主题生成的示例，不包含用户私有业务素材。每个案例都刻意放入较多中文、数字和生僻字，用来展示“不改变样式，只把同样文字从模糊位图变成清晰交付稿”的差异。
 
-| 场景 | GPT Image 2 原图 | 重建后 | 细节对比 |
+| 场景 | 模糊 AI 位图 | 同样式重建后 | 细节对比 |
 | --- | --- | --- | --- |
 | 活动海报 | <img src="examples/event-poster/original.png" width="180" alt="Event poster original"> | <img src="examples/event-poster/rebuilt-preview.png" width="180" alt="Event poster rebuilt"> | <img src="examples/event-poster/detail-comparison.png" width="260" alt="Event poster comparison"> |
 | 微信风格长图 | <img src="examples/wechat-long-image/original.png" width="160" alt="Long image original"> | <img src="examples/wechat-long-image/rebuilt-preview.png" width="160" alt="Long image rebuilt"> | <img src="examples/wechat-long-image/detail-comparison.png" width="260" alt="Long image comparison"> |
