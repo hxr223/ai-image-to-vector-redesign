@@ -1,0 +1,18 @@
+{
+  "input": "/Users/huangxurui/data/code/ai-image-to-vector-redesign/examples/wechat-long-image/output/source.svg",
+  "outputDirectory": "/Users/huangxurui/data/code/ai-image-to-vector-redesign/examples/wechat-long-image/output",
+  "preset": "wechat-long",
+  "viewport": {
+    "width": 1080,
+    "height": 2400
+  },
+  "scale": 3,
+  "fourK": true,
+  "files": [
+    "source.svg",
+    "editable.svg",
+    "publish-3x.png",
+    "publish-4k.png",
+    "print.pdf"
+  ]
+}

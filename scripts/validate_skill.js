@@ -54,6 +54,9 @@ function checkRequiredFiles(root) {
     "templates/qa-report.md",
     "scripts/export_artwork.js",
     "scripts/qa_artwork.js",
+    "scripts/draft_text.js",
+    "scripts/compare_images.js",
+    "scripts/build_examples.js",
     "scripts/init_case.js"
   ];
 

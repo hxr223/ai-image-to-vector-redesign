@@ -75,8 +75,10 @@ The skill is designed for agent use, but the helper scripts make common delivery
 
 ```bash
 npm run inspect -- original.png
+npm run draft-text -- original.png --copy final-copy.txt --out confirmed-text.md
 npm run init-case -- event-poster
 npm run export -- output/source.html --out output --preset xiaohongshu --four-k
+npm run compare -- original.png output/publish-3x.png --crop 80,760,860,220
 npm run qa -- output --min-long-edge 4096 --require publish-4k.png,print.pdf
 ```
 
@@ -107,6 +109,48 @@ This skill rebuilds the design semantically: text becomes text, layout becomes v
 ## Examples
 
 See [examples/README.md](examples/README.md) for the case format. Each example should show the original GPT Image 2 output, problem crops, rebuilt result, detail comparison, exported files, and QA notes.
+
+### Event Poster
+
+Original GPT Image 2 raster:
+
+![Event poster original](examples/event-poster/original.png)
+
+Rebuilt publish-ready output:
+
+![Event poster rebuilt](examples/event-poster/rebuilt-preview.png)
+
+Detail comparison:
+
+![Event poster detail comparison](examples/event-poster/detail-comparison.png)
+
+### WeChat-Style Long Image
+
+Original GPT Image 2 raster:
+
+![Long image original](examples/wechat-long-image/original.png)
+
+Rebuilt publish-ready output:
+
+![Long image rebuilt](examples/wechat-long-image/rebuilt-preview.png)
+
+Detail comparison:
+
+![Long image detail comparison](examples/wechat-long-image/detail-comparison.png)
+
+### Product Social Card
+
+Original GPT Image 2 raster:
+
+![Product card original](examples/product-social-card/original.png)
+
+Rebuilt publish-ready output:
+
+![Product card rebuilt](examples/product-social-card/rebuilt-preview.png)
+
+Detail comparison:
+
+![Product card detail comparison](examples/product-social-card/detail-comparison.png)
 
 ## Roadmap
 

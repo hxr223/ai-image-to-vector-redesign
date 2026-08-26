@@ -35,3 +35,19 @@ For each case, include a short note covering:
 - [Event poster](event-poster/) with blurry or unreliable text.
 - [WeChat-style long infographic](wechat-long-image/) with small copy and cards.
 - [Product promotion card](product-social-card/) with a raster product render and editable layout text.
+
+## Included Cases
+
+Each included case now contains:
+
+- `original.png`
+- `confirmed-text.md`
+- `problem-crop.png`
+- `detail-comparison.png`
+- `rebuilt-preview.png`
+- `output/source.svg`
+- `output/editable.svg`
+- `output/publish-3x.png`
+- `output/publish-4k.png`
+- `output/print.pdf`
+- `output/qa-report.md`

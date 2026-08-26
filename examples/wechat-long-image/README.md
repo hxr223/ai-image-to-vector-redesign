@@ -1,6 +1,6 @@
 # WeChat Long Image
 
-Use this case for a GPT Image 2 long infographic, internal notice, or article graphic where mobile readability matters.
+Use this case for a GPT Image 2 long infographic, internal notice, or article graphic where mobile readability matters. The sample theme is a fictional productivity guide called "Micro Habits For Deep Work."
 
 ## Expected Assets
 
@@ -12,7 +12,7 @@ Use this case for a GPT Image 2 long infographic, internal notice, or article gr
 
 ## Reconstruction Notes
 
-- Confirm headings, numbers, dates, section labels, and any compliance text.
+- Confirm headings, section labels, checklist items, and footer notes.
 - Rebuild cards, dividers, bullets, simple charts, and text blocks as vector/HTML structure.
 - Avoid tiny captions that will fail after chat-app compression.
 - Export a high-resolution PNG as the practical delivery file.

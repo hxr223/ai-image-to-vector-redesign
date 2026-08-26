@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440">
+  <defs>
+    <linearGradient id="stage" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#123f46"/>
+      <stop offset="0.52" stop-color="#f2eee5"/>
+      <stop offset="1" stop-color="#e85c4a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1080" height="1440" rx="0" fill="url(#stage)" stroke="none" opacity="1"/>
+  <circle cx="108" cy="138" r="180" fill="#0f6d72" opacity="0.55"/>
+  <circle cx="990" cy="78" r="260" fill="#15191e" opacity="0.35"/>
+  <rect x="92" y="112" width="896" height="1216" rx="8" fill="#f8f1e5" stroke="#17323a" opacity="0.94"/>
+  <text x="286" y="260" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#27313a" letter-spacing="8">DESIGN  CODE  CREATE</text>
+  <text x="190" y="420" font-family="Inter, Arial, sans-serif" font-size="150" font-weight="900" fill="#df5143" >VECTOR</text>
+  <text x="198" y="565" font-family="Inter, Arial, sans-serif" font-size="128" font-weight="900" fill="#0e5560" >SUMMIT</text>
+  <line x1="360" y1="620" x2="720" y2="620" stroke="#1d2b32" stroke-width="3"/>
+  <text x="262" y="680" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#24313a" >A CONFERENCE FOR CREATORS</text>
+  <text x="188" y="722" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#24313a" >DESIGNERS, BUILDERS, AND DIGITAL THINKERS</text>
+  <rect x="140" y="780" width="372" height="118" rx="8" fill="#df5143" stroke="none" opacity="1"/>
+  <rect x="568" y="780" width="372" height="118" rx="8" fill="#0f7377" stroke="none" opacity="1"/>
+  <text x="190" y="850" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#fff8ef" >JUNE 14-16, 2026</text>
+  <text x="642" y="840" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#fff8ef" >HARBOR HALL</text>
+  <text x="660" y="876" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600" fill="#fff8ef" >PORTLAND, OR</text>
+  <rect x="230" y="948" width="620" height="118" rx="4" fill="#182227" stroke="none" opacity="0.96"/>
+  <text x="318" y="1000" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#f26452" >THREE DAYS OF INSPIRATION</text>
+  <text x="330" y="1042" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#ffffff" >Talks, workshops, and live design demos.</text>
+  <rect x="130" y="1110" width="820" height="74" rx="8" fill="#0e5560" stroke="none" opacity="1"/>
+  <text x="174" y="1158" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#fff8ef" >30+ SPEAKERS</text>
+  <text x="468" y="1158" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#fff8ef" >LIVE DEMOS</text>
+  <text x="700" y="1158" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#fff8ef" >CONNECT &amp; GROW</text>
+  <text x="120" y="1268" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#1c2a31" >STAY IN THE LOOP</text>
+  <text x="120" y="1308" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#df5143" >Updates and announcements</text>
+  <text x="700" y="1268" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#df5143" >#VECTORSSUMMIT</text>
+</svg>

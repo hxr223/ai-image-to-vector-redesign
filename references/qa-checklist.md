@@ -38,6 +38,12 @@ Use `scripts/qa_artwork.js` for mechanical package checks:
 npm run qa -- output --min-long-edge 4096 --require publish-4k.png,print.pdf
 ```
 
+Use `scripts/compare_images.js` to create problem crops and before/after detail comparisons:
+
+```bash
+npm run compare -- original.png output/publish-3x.png --crop 80,760,860,220
+```
+
 ## QA Report Template
 
 ```md

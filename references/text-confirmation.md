@@ -19,6 +19,12 @@ Ask for user confirmation when the design includes:
 4. Rebuild with confirmed text only.
 5. Record the confirmation status in `qa-report.md`.
 
+Use `scripts/draft_text.js` to create a repeatable confirmation draft when a case already has known final copy:
+
+```bash
+npm run draft-text -- original.png --copy final-copy.txt --out confirmed-text.md --uncertain "footer: blurry small print"
+```
+
 ## Delivery Note Language
 
 Use direct wording:
