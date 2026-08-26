@@ -1,4 +1,4 @@
-# MICRO HABITS FOR DEEP WORK Confirmed Text
+# 古籍数字化交付清单 Confirmed Text
 
 ## Source
 
@@ -8,39 +8,34 @@
 ## Confirmed Final Copy
 
 ```text
-MICRO HABITS FOR DEEP WORK
+古籍数字化交付清单
 
-Small actions. Big focus.
-Tiny habits that protect your attention and multiply your output.
+从扫描图到可校对、可检索、可归档的高清长图
 
-01 Plan Your Focus
-Pick one priority before you open your inbox.
-Time block a specific deep-work session.
-Define what done looks like before you start.
+01 先校字
+核对讹、衍、脱、倒四类错误。
+重点复核：龘、齉、爨、鬱、麤、靐、囍、鹱。
+人名、地名、纪年、卷次不得依赖 AI 猜测。
 
-02 Start Strong
-Remove major distractions from sight.
-Use a focus timer for 50 to 90 minutes.
-Create a short start ritual that tells your brain it is time to work.
+02 再排版
+标题、眉批、夹注、脚注分层处理。
+竖排原文保留阅读节奏，横排释文保证手机可读。
+凡例、版本说明、钤印位置单独标注。
 
-03 Recover To Go Deeper
-Take a real break.
-Get light and air.
-Hydrate and fuel.
-End with a close: review progress and plan the next step.
+03 后导出
+公众号长图：宽 1080，长边按内容延展。
+审校 PDF：保留页码、来源、校对人和日期。
+归档 SVG：文字可选中，图层可复查。
 
-Daily Micro Habit Checklist
-I chose my number-one priority.
-I scheduled my deep-work block.
-I removed major distractions.
-I worked in a focused block.
-I took a real break and moved.
-I closed the day with a review.
+交付提醒
+不要把低清扫描图直接放大。
+不要把无法确认的字写成确定结论。
+所有生僻字必须进入 confirmed-text.md。
 ```
 
 ## Uncertain Source Regions
 
-- Original small text is treated as unreliable AI raster text.
+- Original text is intentionally treated as unreliable flattened AI raster text.
 
 ## Rule
 

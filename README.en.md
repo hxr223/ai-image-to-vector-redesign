@@ -36,7 +36,7 @@ Instead of delivering only a PNG, the workflow produces SVG, PDF, high-resolutio
 
 ## Examples
 
-The examples below use generated fictional themes and do not contain private user material.
+The examples below use generated fictional themes and do not contain private user material. Each case intentionally includes dense Chinese copy, numbers, and uncommon characters to show the same text becoming clear and deliverable after reconstruction.
 
 | Case | GPT Image 2 Original | Rebuilt | Detail Comparison |
 | --- | --- | --- | --- |

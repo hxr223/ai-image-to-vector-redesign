@@ -1,6 +1,6 @@
 # Examples
 
-Each example should prove the value of reconstruction over upscaling or tracing.
+Each example should prove the value of reconstruction over upscaling or tracing. Prefer text-heavy inputs with small copy, numbers, names, dates, and uncommon characters so the before/after difference is visible at a glance.
 
 ## Recommended Case Structure
 
@@ -32,9 +32,9 @@ For each case, include a short note covering:
 
 ## First Case Targets
 
-- [Event poster](event-poster/) with blurry or unreliable text.
-- [WeChat-style long infographic](wechat-long-image/) with small copy and cards.
-- [Product promotion card](product-social-card/) with a raster product render and editable layout text.
+- [Event poster](event-poster/) with dense Chinese event copy and uncommon glyphs.
+- [WeChat-style long infographic](wechat-long-image/) with small copy, notes, and rare-character QA text.
+- [Product promotion card](product-social-card/) with price, discount, product claims, and uncommon brand copy.
 
 ## Included Cases
 

@@ -1,53 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="2400" viewBox="0 0 1080 2400">
-  <rect x="0" y="0" width="1080" height="2400" rx="0" fill="#f7f3e7" stroke="none" opacity="1"/>
-  <rect x="0" y="0" width="1080" height="580" rx="0" fill="#eef4df" stroke="none" opacity="1"/>
-  <circle cx="860" cy="120" r="210" fill="#dfe9d0"/>
-  <circle cx="930" cy="228" r="132" fill="#9db887"/>
-  <text x="78" y="160" font-family="Inter, Arial, sans-serif" font-size="104" font-weight="900" fill="#2f4c25" >MICRO</text>
-  <text x="78" y="282" font-family="Inter, Arial, sans-serif" font-size="104" font-weight="900" fill="#2f4c25" >HABITS</text>
-  <text x="238" y="380" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" fill="#55733d" >FOR</text>
-  <text x="78" y="492" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="900" fill="#172336" >DEEP WORK</text>
-  <text x="78" y="560" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500" fill="#526170" >Small actions. Big focus.</text>
   
-  <rect x="86" y="650" width="908" height="230" rx="8" fill="#ffffff" stroke="#dfe7d9" opacity="1"/>
-  <circle cx="150" cy="724" r="42" fill="#597d43"/>
-  <text x="132" y="738" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff" >01</text>
-  <text x="230" y="732" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#456737" >Plan Your Focus</text>
-  <text x="230" y="786" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#526170" >Pick one priority. Time block it. Define done.</text>
-  <line x1="230" y1="814" x2="900" y2="814" stroke="#d8e0d2" stroke-width="2"/>
-  <text x="230" y="854" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600" fill="#6e7b69" >Rebuilt as real text and vector cards</text>
-  <rect x="86" y="950" width="908" height="230" rx="8" fill="#ffffff" stroke="#dfe7d9" opacity="1"/>
-  <circle cx="150" cy="1024" r="42" fill="#2d6a99"/>
-  <text x="132" y="1038" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff" >02</text>
-  <text x="230" y="1032" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#2d6a99" >Start Strong</text>
-  <text x="230" y="1086" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#526170" >Remove distractions. Use a focus timer.</text>
-  <line x1="230" y1="1114" x2="900" y2="1114" stroke="#d8e0d2" stroke-width="2"/>
-  <text x="230" y="1154" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600" fill="#6e7b69" >Rebuilt as real text and vector cards</text>
-  <rect x="86" y="1250" width="908" height="230" rx="8" fill="#ffffff" stroke="#dfe7d9" opacity="1"/>
-  <circle cx="150" cy="1324" r="42" fill="#d19a17"/>
-  <text x="132" y="1338" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff" >03</text>
-  <text x="230" y="1332" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#b87900" >Recover To Go Deeper</text>
-  <text x="230" y="1386" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#526170" >Take a break. Get light. Hydrate. Close well.</text>
-  <line x1="230" y1="1414" x2="900" y2="1414" stroke="#d8e0d2" stroke-width="2"/>
-  <text x="230" y="1454" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600" fill="#6e7b69" >Rebuilt as real text and vector cards</text>
-  <rect x="86" y="1550" width="908" height="230" rx="8" fill="#ffffff" stroke="#dfe7d9" opacity="1"/>
-  <circle cx="150" cy="1624" r="42" fill="#597d43"/>
-  <text x="132" y="1638" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff" >04</text>
-  <text x="230" y="1632" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#456737" >Deep Day Checklist</text>
-  <text x="230" y="1686" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#526170" >Priority chosen. Block scheduled. Session completed.</text>
-  <line x1="230" y1="1714" x2="900" y2="1714" stroke="#d8e0d2" stroke-width="2"/>
-  <text x="230" y="1754" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600" fill="#6e7b69" >Rebuilt as real text and vector cards</text>
-  <rect x="86" y="1884" width="908" height="260" rx="8" fill="#ffffff" stroke="#e1dfd6" opacity="1"/>
-  <text x="316" y="1948" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#172336" >SHALLOW DAY VS DEEP DAY</text>
-  <rect x="170" y="1995" width="320" height="26" rx="6" fill="#b7c9db" stroke="none" opacity="1"/>
-  <rect x="590" y="1995" width="320" height="26" rx="6" fill="#91a970" stroke="none" opacity="1"/>
-  <text x="266" y="2016" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#172336" >Shallow Day</text>
-  <text x="704" y="2016" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff" >Deep Day</text>
-  <text x="176" y="2074" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#526170" >Many tasks, little progress</text>
-  <text x="590" y="2074" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#526170" >Fewer tasks, real progress</text>
-  <text x="176" y="2118" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#526170" >Constant context switching</text>
-  <text x="590" y="2118" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#526170" >Long blocks of focus</text>
-  <text x="86" y="2286" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#ffffff" >This example demonstrates confirmed text, vector cards, and a 4K-safe long PNG export.</text>
-  <rect x="0" y="2220" width="1080" height="180" rx="0" fill="#55733d" stroke="none" opacity="1"/>
+  
+  <rect x="0" y="0" width="1080" height="2400" rx="0" fill="#f2f3ed" stroke="none" opacity="1"/>
+  <rect x="58" y="58" width="964" height="2284" rx="8" fill="#fffdf7" stroke="#1f3529" opacity="1"/>
+  <text x="92" y="176" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="82" font-weight="900" fill="#17251d" >古籍数字化</text>
+  <text x="92" y="270" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="82" font-weight="900" fill="#17251d" >交付清单</text>
+  <text x="96" y="348" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="32" font-weight="700" fill="#536158" >从扫描图到可校对、可检索、可归档的高清长图</text>
+  
+  <rect x="96" y="500" width="888" height="348" rx="8" fill="#ffffff" stroke="#d9ded2" opacity="1"/>
+  <circle cx="162" cy="576" r="46" fill="#34543f"/>
+  <text x="136" y="592" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="40" font-weight="900" fill="#ffffff" >01</text>
+  <text x="236" y="592" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="50" font-weight="900" fill="#34543f" >先校字</text>
+  <text x="160" y="664" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >核对讹、衍、脱、倒四类错误。</text>
+  <text x="160" y="722" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >重点复核：龘、齉、爨、鬱、麤、靐、囍、鹱。</text>
+  <text x="160" y="780" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >人名、地名、纪年、卷次不得依赖 AI 猜测。</text>
+  
+  
+  <rect x="96" y="960" width="888" height="348" rx="8" fill="#ffffff" stroke="#d9ded2" opacity="1"/>
+  <circle cx="162" cy="1036" r="46" fill="#925f22"/>
+  <text x="136" y="1052" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="40" font-weight="900" fill="#ffffff" >02</text>
+  <text x="236" y="1052" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="50" font-weight="900" fill="#925f22" >再排版</text>
+  <text x="160" y="1124" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >标题、眉批、夹注、脚注分层处理。</text>
+  <text x="160" y="1182" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >竖排原文保留阅读节奏，横排释文保证手机可读。</text>
+  <text x="160" y="1240" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >凡例、版本说明、钤印位置单独标注。</text>
+  
+  
+  <rect x="96" y="1420" width="888" height="348" rx="8" fill="#ffffff" stroke="#d9ded2" opacity="1"/>
+  <circle cx="162" cy="1496" r="46" fill="#385f88"/>
+  <text x="136" y="1512" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="40" font-weight="900" fill="#ffffff" >03</text>
+  <text x="236" y="1512" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="50" font-weight="900" fill="#385f88" >后导出</text>
+  <text x="160" y="1584" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >公众号长图：宽 1080，长边按内容延展。</text>
+  <text x="160" y="1642" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >审校 PDF：保留页码、来源、校对人和日期。</text>
+  <text x="160" y="1700" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="650" fill="#1f2933" >归档 SVG：文字可选中，图层可复查。</text>
+  
+  <rect x="96" y="1900" width="888" height="280" rx="8" fill="#17251d" stroke="none" opacity="1"/>
+  <text x="140" y="1980" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="46" font-weight="900" fill="#f8d77f" >交付提醒</text>
+  <text x="140" y="2054" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff" >不要把低清扫描图直接放大。</text>
+  <text x="140" y="2108" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff" >不要把无法确认的字写成确定结论。</text>
+  <text x="140" y="2162" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff" >所有生僻字必须进入 confirmed-text.md。</text>
+  <text x="96" y="2284" font-family="PingFang SC, Hiragino Sans GB, STHeiti, Songti SC, Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="700" fill="#6a736b" >AI Image To Vector Redesign / Example Case</text>
 </svg>

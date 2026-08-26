@@ -1,4 +1,4 @@
-# HARBOR LIGHTS CREATIVE NIGHT Confirmed Text
+# 爨字旧巷字体夜校 Confirmed Text
 
 ## Source
 
@@ -8,33 +8,31 @@
 ## Confirmed Final Copy
 
 ```text
-HARBOR LIGHTS CREATIVE NIGHT
+爨字旧巷字体夜校
 
-A one-night meetup for designers, builders, and visual storytellers.
+生僻字专项：龘、齉、爨、鬱、麤、靐、饕餮
 
-Friday, October 16, 2026
-7:00 PM - 10:00 PM
+2026年10月16日 周五
+19:30-22:10
 
-Pier 27 Studio Hall
-San Francisco, CA
+苏州旧巷书房  澄湖厅二层
 
-Talks
-Maya Chen - Designing With Motion
-Jon Bell - Systems That Feel Human
-Ari Patel - From Prompt To Poster
+课程安排
+19:30  旧招牌里的异体字
+20:10  从“爨宝子碑”到现代标题字
+20:50  海报小字的可读性修复
+21:30  现场重建：糊字、错字、伪字
 
-Live demos, portfolio reviews, and open studio networking.
+报名费 128 元
+限额 36 人
 
-Early Bird Tickets: $24
-Reserve your seat at harborlights.example
-
-Hosted by Studio North
-Partners: Canvas Lab / Pixel Foundry / Bay Type Club
+请携带一张你想修复的 AI 海报。
+报名：glyphnight.example
 ```
 
 ## Uncertain Source Regions
 
-- Original small text is treated as unreliable AI raster text.
+- Original text is intentionally treated as unreliable flattened AI raster text.
 
 ## Rule
 
