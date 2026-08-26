@@ -1,0 +1,28 @@
+{
+  "name": "ai-image-to-vector-redesign",
+  "version": "0.1.0",
+  "description": "Finish flattened GPT Image 2 designs as sharp, editable SVG/PDF/high-resolution PNG packages.",
+  "type": "commonjs",
+  "scripts": {
+    "inspect": "node scripts/inspect_image.js",
+    "init-case": "node scripts/init_case.js",
+    "export": "node scripts/export_artwork.js",
+    "qa": "node scripts/qa_artwork.js",
+    "check": "node --check scripts/inspect_image.js && node --check scripts/export_artwork.js && node --check scripts/qa_artwork.js && node --check scripts/init_case.js && node --check scripts/validate_skill.js",
+    "validate:skill": "node scripts/validate_skill.js",
+    "validate": "npm run check && npm run validate:skill"
+  },
+  "keywords": [
+    "codex-skill",
+    "gpt-image-2",
+    "svg",
+    "pdf",
+    "poster",
+    "vector",
+    "design"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

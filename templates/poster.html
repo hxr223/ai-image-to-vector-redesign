@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebuilt Poster</title>
+  <style>
+    :root {
+      --ink: #15202b;
+      --muted: #526170;
+      --paper: #f7f5ef;
+      --accent: #dd4f3f;
+      --panel: rgba(255, 255, 255, 0.88);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: var(--paper);
+      font-family: Inter, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+    }
+
+    .artboard {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(221, 79, 63, 0.18), transparent 34%),
+        linear-gradient(45deg, rgba(28, 111, 164, 0.12), transparent 48%),
+        var(--paper);
+    }
+
+    .content {
+      position: absolute;
+      inset: 90px 84px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 44px;
+    }
+
+    .eyebrow {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    h1 {
+      margin: 20px 0 0;
+      max-width: 860px;
+      font-size: 96px;
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .panel {
+      align-self: end;
+      padding: 44px;
+      border: 2px solid rgba(21, 32, 43, 0.12);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .panel p {
+      margin: 0;
+      font-size: 38px;
+      line-height: 1.32;
+      color: var(--muted);
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 36px;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="artboard" data-artwork>
+    <section class="content">
+      <header>
+        <div class="eyebrow">CONFIRMED COPY</div>
+        <h1>Rebuild the Real Headline Here</h1>
+      </header>
+      <section class="panel">
+        <p>Replace this text with user-confirmed copy. Keep the layout crisp, readable, and ready for high-resolution export.</p>
+      </section>
+      <footer class="footer">
+        <span>DATE OR LOCATION</span>
+        <span>brand.example</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

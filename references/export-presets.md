@@ -8,6 +8,7 @@ Choose the export target based on where the final design will be used. When the 
 - Increase PNG resolution with device scale factor or equivalent raster scale.
 - Avoid adding outer whitespace during export.
 - Inspect the final exported file, not only the source SVG or HTML.
+- Export `publish-4k.png` when the user asks for 4K or when a platform-safe archive is useful.
 
 ## Common Presets
 
@@ -17,6 +18,7 @@ Use for ordinary sharing or uploads when no platform is specified.
 
 - Export: `publish-3x.png`
 - Scale: 3x or higher when text is small.
+- Optional: `publish-4k.png`
 - Also provide: `editable.svg`, `print.pdf`.
 
 ### WeChat Or Enterprise WeChat Long Image
@@ -24,6 +26,7 @@ Use for ordinary sharing or uploads when no platform is specified.
 Use for long posters, notices, training material, and internal sharing.
 
 - Export a high-resolution PNG.
+- Prefer a long edge of at least 4096px for 4K-style delivery when the composition size allows it.
 - Keep text large enough to survive mobile compression.
 - Prefer PNG as the practical delivery file.
 - Provide SVG/PDF as source or archive files.

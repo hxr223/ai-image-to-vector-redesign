@@ -32,6 +32,6 @@ For each case, include a short note covering:
 
 ## First Case Targets
 
-- Event poster with blurry or unreliable text.
-- WeChat-style long infographic with small copy and cards.
-- Product promotion card with a raster product render and editable layout text.
+- [Event poster](event-poster/) with blurry or unreliable text.
+- [WeChat-style long infographic](wechat-long-image/) with small copy and cards.
+- [Product promotion card](product-social-card/) with a raster product render and editable layout text.

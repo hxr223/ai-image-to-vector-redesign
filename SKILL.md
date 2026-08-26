@@ -30,6 +30,8 @@ Before rebuilding, inspect the source image and name the delivery risks that mat
 
 If the image is not a GPT Image 2 output but has the same flattened AI-design problems, apply the same judgment.
 
+For a structured inspection checklist, read [references/delivery-diagnosis.md](references/delivery-diagnosis.md). Use `scripts/inspect_image.js` when a quick dimension and resolution report would help.
+
 ## Text Accuracy
 
 Do not claim correctness from blurry AI-generated pixels. When text matters, follow [references/text-confirmation.md](references/text-confirmation.md):
@@ -51,6 +53,8 @@ Choose the least noisy strategy for each region:
 - Avoid full-image vector tracing for AI posters or scenic backgrounds; it usually creates noisy paths and does not fix text.
 - Prioritize readable, non-overlapping text over pixel-perfect imitation of malformed source details.
 
+For region-level decisions, read [references/reconstruction-strategy.md](references/reconstruction-strategy.md).
+
 ## Expected Output Package
 
 When producing files, prefer a stable package:
@@ -58,10 +62,23 @@ When producing files, prefer a stable package:
 - `source.html` or `source.svg` as the maintainable source.
 - `editable.svg` for editability and archive.
 - `publish-3x.png` for chat, social, and mobile publishing.
+- `publish-4k.png` when the user asks for 4K or extra platform-safe resolution.
 - `print.pdf` for client review or print.
 - `qa-report.md` describing the reconstruction, confirmed text status, export preset, and final checks.
 
 Choose platform settings from [references/export-presets.md](references/export-presets.md) when the user gives a delivery channel.
+For package naming and delivery notes, read [references/output-package.md](references/output-package.md).
+
+Use templates from `templates/` when starting a new reconstruction from scratch. Use `scripts/export_artwork.js` for repeatable PNG/PDF export and `scripts/qa_artwork.js` for automated package checks when Node and Playwright are available.
+
+## Boundaries
+
+Do not present this skill as photographic super-resolution, OCR certainty, or full native PowerPoint reconstruction:
+
+- If the user primarily wants photo restoration, use an image editing or upscaling workflow instead.
+- If the user primarily wants fully native PPTX editing, choose a PPTX-focused reconstruction workflow.
+- If the user wants a simple logo traced into paths, a generic vectorizer may be enough.
+- If final copy is unavailable, deliver the visual reconstruction with explicit text-accuracy caveats.
 
 ## Workflow
 

@@ -27,9 +27,16 @@ Run these checks before presenting final deliverables. The goal is to catch ordi
 ## Export Checks
 
 - PNG resolution matches the requested scale, such as 3x.
+- `publish-4k.png` has a long edge of at least 4096px when 4K was requested.
 - PDF opens and keeps vector text/shapes sharp where applicable.
 - SVG or HTML source references local assets correctly.
 - File names match the expected output package.
+
+Use `scripts/qa_artwork.js` for mechanical package checks:
+
+```bash
+npm run qa -- output --min-long-edge 4096 --require publish-4k.png,print.pdf
+```
 
 ## QA Report Template
 

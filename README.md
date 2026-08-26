@@ -32,8 +32,32 @@ A complete reconstruction should produce:
 - `source.html` or `source.svg` as the maintainable source.
 - `editable.svg` for editing and archive.
 - `publish-3x.png` for chat, social, and mobile publishing.
+- `publish-4k.png` when the user asks for 4K or platform-safe high resolution.
 - `print.pdf` for review and print.
 - `qa-report.md` explaining what was rebuilt, what remains raster, and what was checked.
+
+## Install
+
+Clone the repository and install the optional export dependency:
+
+```bash
+git clone https://github.com/hxr223/ai-image-to-vector-redesign.git
+cd ai-image-to-vector-redesign
+npm install
+```
+
+If you already have Google Chrome installed and want to avoid Playwright browser downloads, use:
+
+```bash
+npm install --ignore-scripts
+```
+
+Install it as a skill by copying or symlinking the folder into your agent's skill directory:
+
+```bash
+mkdir -p ~/.codex/skills
+ln -s "$PWD" ~/.codex/skills/ai-image-to-vector-redesign
+```
 
 ## Usage
 
@@ -44,6 +68,33 @@ Use ai-image-to-vector-redesign to turn this GPT Image 2 poster into a publish-r
 ```
 
 When text accuracy matters, provide the final copy or confirm the agent's extracted text before reconstruction.
+
+## Helper Scripts
+
+The skill is designed for agent use, but the helper scripts make common delivery steps repeatable:
+
+```bash
+npm run inspect -- original.png
+npm run init-case -- event-poster
+npm run export -- output/source.html --out output --preset xiaohongshu --four-k
+npm run qa -- output --min-long-edge 4096 --require publish-4k.png,print.pdf
+```
+
+Available templates:
+
+- `templates/poster.html`
+- `templates/long-image.html`
+- `templates/social-card.html`
+- `templates/qa-report.md`
+
+## Skill References
+
+- [Delivery diagnosis](references/delivery-diagnosis.md)
+- [Text confirmation](references/text-confirmation.md)
+- [Reconstruction strategy](references/reconstruction-strategy.md)
+- [Export presets](references/export-presets.md)
+- [Output package](references/output-package.md)
+- [QA checklist](references/qa-checklist.md)
 
 ## How It Differs From Upscaling Or Tracing
 
@@ -67,3 +118,5 @@ See [examples/README.md](examples/README.md) for the case format. Each example s
 - Automatic QA checklist.
 - Before/after example cases.
 - Lightweight export and QA scripts.
+- OCR-assisted text draft extraction.
+- Visual diff sheets for before/after detail review.

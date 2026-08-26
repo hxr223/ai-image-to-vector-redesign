@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+npm-debug.log*
+
+work/
+tmp/
+dist/
+
+examples/*/work/
+!examples/README.md
+!examples/*/README.md
+!examples/*/original.png
+!examples/*/problem-crop.png
+!examples/*/rebuilt-preview.png
+!examples/*/detail-comparison.png
