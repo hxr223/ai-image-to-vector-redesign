@@ -1,34 +1,76 @@
 ---
 name: ai-image-to-vector-redesign
-description: Rebuild AI-generated raster designs into sharp deliverables by retyping text, redrawing layout elements as vectors, and exporting SVG/PDF/high-resolution PNG. Use when simple upscaling would not fix blurry text or layout artifacts.
+description: Finish flattened GPT Image 2 design outputs by rebuilding text and layout into sharp, editable SVG/PDF/high-resolution PNG deliverables. Use for AI-generated posters, long images, infographics, flyers, social cards, and marketing graphics when upscaling or tracing would not fix blurry text or layout artifacts.
 ---
 
 # AI Image To Vector Redesign
 
-Use this skill when the user wants an AI-generated image, poster, infographic, flyer, long image, or screenshot-like design made clearer, editable, scalable, or suitable for print/social sharing.
+Use this skill when the user wants a GPT Image 2 output or similar AI-generated design made clearer, editable, scalable, or suitable for real publishing.
 
-## Core Judgment
+This is a design reconstruction workflow, not a generic vectorizer. Treat the source image as a visual reference for a new maintainable artwork source.
 
-Treat the source image as a visual reference, not as recoverable source artwork.
+## Core Promise
 
-- Blurry or malformed text should be retyped as real text or converted to clean text outlines; do not promise to restore it from pixels.
-- Flat layout elements such as cards, borders, icons, charts, separators, bullets, badges, ribbons, and decorative line art should usually be redrawn as SVG/vector shapes.
-- Photographic, painterly, or highly textured areas should usually remain raster, be cropped/cleaned, be replaced with a higher-resolution source, or be regenerated. Do not force full-image vector tracing when it will create noisy paths.
-- For messaging apps or platforms with poor SVG support, export a high-resolution PNG from the vector source. For print or review, also provide PDF when useful.
+GPT Image 2 can produce beautiful flattened concepts. This skill turns those concepts into publish-ready deliverables by rebuilding the parts that need to be crisp and editable:
+
+- Retype important text as real text or clean outlines.
+- Redraw layout elements as vector shapes.
+- Preserve complex image regions as embedded raster assets when vector tracing would degrade them.
+- Export practical files for publishing, sharing, review, and future edits.
+
+## First Inspection
+
+Before rebuilding, inspect the source image and name the delivery risks that matter:
+
+- Flattened or blurry text, fake glyphs, malformed small copy, or uncertain numbers.
+- Cards, borders, badges, icons, charts, and separators that are visually present but not editable.
+- Photos, product renders, painterly backgrounds, or complex illustrations that should remain raster.
+- Extra white borders, cropping issues, poor aspect ratio, or low-resolution output.
+- The likely publishing channel: chat app, WeChat, Enterprise WeChat, Xiaohongshu, social feed, client PDF, print, or archive.
+
+If the image is not a GPT Image 2 output but has the same flattened AI-design problems, apply the same judgment.
+
+## Text Accuracy
+
+Do not claim correctness from blurry AI-generated pixels. When text matters, follow [references/text-confirmation.md](references/text-confirmation.md):
+
+- Extract or draft the visible text.
+- Mark unreadable, suspicious, or low-confidence regions.
+- Ask the user to confirm final copy before rebuilding those regions.
+- Use only confirmed text for final deliverables.
+
+If the user explicitly says the exact text does not matter, state that assumption in the delivery notes.
+
+## Reconstruction Strategy
+
+Choose the least noisy strategy for each region:
+
+- Use vector text and shapes for headings, body copy, labels, cards, borders, lines, simple icons, badges, bullets, arrows, charts, and repeated layout elements.
+- Use embedded raster assets for photos, product images, painterly backgrounds, detailed illustrations, complex logos, and visual regions that do not need editing.
+- Use a hybrid result when the design combines editable text/layout with complex background imagery.
+- Avoid full-image vector tracing for AI posters or scenic backgrounds; it usually creates noisy paths and does not fix text.
+- Prioritize readable, non-overlapping text over pixel-perfect imitation of malformed source details.
+
+## Expected Output Package
+
+When producing files, prefer a stable package:
+
+- `source.html` or `source.svg` as the maintainable source.
+- `editable.svg` for editability and archive.
+- `publish-3x.png` for chat, social, and mobile publishing.
+- `print.pdf` for client review or print.
+- `qa-report.md` describing the reconstruction, confirmed text status, export preset, and final checks.
+
+Choose platform settings from [references/export-presets.md](references/export-presets.md) when the user gives a delivery channel.
 
 ## Workflow
 
-1. Inspect the image dimensions, content type, and likely delivery channel. Explain any platform limitation, such as chat apps rasterizing or compressing SVG previews.
-2. Ask for or extract final text when text accuracy matters. If the image text is AI-generated or blurry, require user-confirmed copy before claiming correctness.
-3. Decide the reconstruction strategy:
-   - Pure vector for simple diagrams, logos, icons, and text-heavy flat graphics.
-   - Hybrid vector plus embedded raster for designs with photos, realistic backgrounds, product shots, or AI scenic areas.
-4. Rebuild the design with a maintainable source file, preferably SVG or HTML/CSS that generates SVG/PNG/PDF. Match the original style closely but prioritize readable, non-overlapping text.
-5. Export deliverables according to use:
-   - `SVG` for editability/scalability.
-   - `PDF` for print or file sharing.
-   - High-resolution `PNG` for WeChat, Enterprise WeChat, social apps, or places that only accept bitmap images.
-6. Visually inspect the result at full composition scale and at text-detail scale. Fix white borders, cropped content, text overlap, accidental source-text ghosts, and layout shifts before presenting it.
+1. Inspect the image dimensions, content type, text risk, and delivery channel.
+2. Confirm final text when accuracy matters.
+3. Decide which regions are vector reconstruction and which remain embedded raster.
+4. Rebuild the artwork with maintainable SVG or HTML/CSS that can export SVG/PNG/PDF.
+5. Export the chosen deliverables with the correct aspect ratio and scale.
+6. Run the visual checks in [references/qa-checklist.md](references/qa-checklist.md) before presenting the result.
 
 ## Export Notes
 
@@ -42,14 +84,14 @@ Example:
   --disable-gpu \
   --no-sandbox \
   --force-device-scale-factor=4 \
-  --screenshot=/path/to/output-4k.png \
+  --screenshot=/path/to/output-4x.png \
   --window-size=1024,1535 \
   file:///path/to/source.svg
 ```
 
 This turns a `1024 x 1535` artwork into a `4096 x 6140` PNG without adding side whitespace.
 
-For PDF, print the SVG/HTML source directly from the browser when native vector output is acceptable. Note that embedded photos remain raster inside the PDF.
+For PDF, print the SVG or HTML source directly from the browser when native vector output is acceptable. Embedded photos remain raster inside the PDF.
 
 ## Delivery Language
 
