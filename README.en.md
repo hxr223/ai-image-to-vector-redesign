@@ -1,12 +1,14 @@
 # AI Image To Vector Redesign
 
-Make AI-generated designs actually deliverable.
+Make GPT Image 2 designs actually deliverable.
 
-Turn GPT Image 2 posters, long images, product cards, and social graphics into sharp, editable SVG / PDF / 4K PNG packages.
+GPT Image 2 can make beautiful designs, but the text is often blurry, wrong, or impossible to edit. This skill preserves the same visual style and rebuilds the artwork as readable, editable SVG / PDF / 4K PNG deliverables.
 
 [中文](README.md) · [English](README.en.md)
 
 [Examples](#examples) · [Quick Start](#quick-start) · [Why Use It](#why-use-it) · [Workflow](#workflow) · [Output Package](#output-package)
+
+![Same style, clear text](examples/hero-comparison.png)
 
 ---
 

@@ -1,12 +1,14 @@
 # AI Image To Vector Redesign
 
-让 AI 生成图，真正能交付。
+让 GPT Image 2 生成图，真正能交付。
 
-把 GPT Image 2 生成的海报、长图、产品卡片和社交媒体图，重建为文字清晰、版式可编辑、能发给客户的 SVG / PDF / 4K PNG。
+GPT Image 2 图很好看，但字糊了、错了、不能改。这个 skill 保持原样式，把它重建成文字可信、可编辑、能发给客户的 SVG / PDF / 4K PNG。
 
 [中文](README.md) · [English](README.en.md)
 
 [效果案例](#效果案例) · [快速开始](#快速开始) · [为什么用它](#为什么用它) · [工作方式](#工作方式) · [输出包](#输出包)
+
+![Same style, clear text](examples/hero-comparison.png)
 
 ---
 

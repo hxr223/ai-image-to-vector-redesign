@@ -246,6 +246,12 @@ function browserLaunchOptions() {
   return executablePath ? { executablePath } : {};
 }
 
+function imageDataUrl(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  const mime = ext === ".jpg" || ext === ".jpeg" ? "image/jpeg" : "image/png";
+  return `data:${mime};base64,${fs.readFileSync(filePath).toString("base64")}`;
+}
+
 async function renderOriginal(browser, svg, outputPath) {
   const match = svg.match(/width="(\d+)" height="(\d+)"/);
   if (!match) throw new Error("Could not read SVG dimensions");
@@ -271,6 +277,107 @@ async function renderOriginal(browser, svg, outputPath) {
 <body><div class="frame">${svg}</div></body>
 </html>`);
   await page.locator(".frame").screenshot({ path: outputPath });
+  await page.close();
+}
+
+async function renderHero(browser) {
+  const heroPath = path.join(ROOT, "examples", "hero-comparison.png");
+  const eventComparison = imageDataUrl(path.join(ROOT, "examples", "event-poster", "detail-comparison.png"));
+  const productComparison = imageDataUrl(path.join(ROOT, "examples", "product-social-card", "detail-comparison.png"));
+  const page = await browser.newPage({ viewport: { width: 1800, height: 1060 }, deviceScaleFactor: 1 });
+  await page.setContent(`<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      width: 1800px;
+      height: 1060px;
+      margin: 0;
+      font-family: ${FONT};
+      background: linear-gradient(135deg, #111827 0%, #17251d 55%, #81551a 100%);
+      color: #fffaf1;
+      overflow: hidden;
+    }
+    .wrap { padding: 72px 82px; }
+    .eyebrow {
+      display: inline-block;
+      padding: 14px 22px;
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 8px;
+      color: #f8d77f;
+      font-size: 30px;
+      font-weight: 800;
+    }
+    h1 {
+      margin: 34px 0 20px;
+      font-size: 90px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .sub {
+      margin: 0 0 44px;
+      color: rgba(255,250,241,0.86);
+      font-size: 40px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .panel {
+      overflow: hidden;
+      border-radius: 8px;
+      background: #fffaf1;
+      box-shadow: 0 28px 80px rgba(0,0,0,0.35);
+    }
+    .panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left top;
+      display: block;
+    }
+    .chips {
+      display: flex;
+      gap: 16px;
+      margin-top: 34px;
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .chip {
+      padding: 14px 20px;
+      border-radius: 8px;
+      background: rgba(255,250,241,0.12);
+      border: 1px solid rgba(255,250,241,0.22);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">GPT Image 2 Design Finishing</div>
+    <h1>同样式，不重画<br>只把字修清楚</h1>
+    <p class="sub">把模糊 AI 位图重建成文字可信、可编辑、可交付的 SVG / PDF / 4K PNG。</p>
+    <section class="grid">
+      <div class="panel"><img src="${eventComparison}" alt=""></div>
+      <div class="panel"><img src="${productComparison}" alt=""></div>
+    </section>
+    <div class="chips">
+      <div class="chip">Same Style</div>
+      <div class="chip">Clear Text</div>
+      <div class="chip">Editable SVG</div>
+      <div class="chip">4K PNG</div>
+      <div class="chip">QA Report</div>
+    </div>
+  </main>
+</body>
+</html>`);
+  await page.screenshot({ path: heroPath });
   await page.close();
 }
 
@@ -336,6 +443,7 @@ async function main() {
       ], ROOT);
       fs.copyFileSync(path.join(out, "publish-3x.png"), path.join(dir, "rebuilt-preview.png"));
     }
+    await renderHero(browser);
   } finally {
     await browser.close();
   }
