@@ -176,3 +176,7 @@ npm run build:examples
 ## License
 
 MIT
+
+## Faithful repair by default
+
+Preserve composition, background, separate plaques and text direction; redesign only on request. Define source-pixel regions before editing; see [faithful repair](references/faithful-repair.md). Use `compare --full` for full-canvas comparisons. Mechanical QA writes `qa-mechanical.json` and `qa-mechanical.md`, preserving manual `qa-report.md`; it does not assess text accuracy or visual fidelity.

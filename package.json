@@ -11,9 +11,11 @@
     "init-case": "node scripts/init_case.js",
     "export": "node scripts/export_artwork.js",
     "qa": "node scripts/qa_artwork.js",
-    "check": "node --check scripts/inspect_image.js && node --check scripts/draft_text.js && node --check scripts/compare_images.js && node --check scripts/build_examples.js && node --check scripts/export_artwork.js && node --check scripts/qa_artwork.js && node --check scripts/init_case.js && node --check scripts/validate_skill.js",
+    "check": "node --check scripts/inspect_image.js && node --check scripts/draft_text.js && node --check scripts/compare_images.js && node --check scripts/build_examples.js && node --check scripts/export_artwork.js && node --check scripts/qa_artwork.js && node --check scripts/init_case.js && node --check scripts/validate_skill.js && node --check scripts/review_regions.js",
     "validate:skill": "node scripts/validate_skill.js",
-    "validate": "npm run check && npm run validate:skill"
+    "validate": "npm run check && npm run validate:skill",
+    "review-regions": "node scripts/review_regions.js",
+    "test": "node --test tests/*.test.js"
   },
   "keywords": [
     "codex-skill",

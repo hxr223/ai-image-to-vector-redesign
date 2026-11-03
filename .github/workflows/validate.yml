@@ -22,3 +22,9 @@ jobs:
 
       - name: Validate skill package
         run: npm run validate
+
+      - name: Install test browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Test faithful repair helpers
+        run: npm test

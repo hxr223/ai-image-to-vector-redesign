@@ -20,6 +20,17 @@
 - Photos/product renders:
 - Complex illustrations/logos:
 
+## Separate Verdicts
+
+- File checks: pending (see qa-mechanical.json)
+- Text accuracy: pending
+- Visual fidelity: pending
+- Full-canvas comparison:
+- Region annotation:
+- Outside-region diagnostic:
+- Font/material deviations:
+- Unresolved regions:
+
 ## Checks
 
 - Full render:

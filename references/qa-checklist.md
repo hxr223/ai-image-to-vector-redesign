@@ -10,6 +10,14 @@ Run these checks before presenting final deliverables. The goal is to catch ordi
 - Embedded raster assets appear in the exported files.
 - The final aspect ratio matches the intended delivery channel.
 
+## Fidelity Checks
+
+- Full-canvas before/after comparison exists, not only a convenient detail crop.
+- Background, illustration extent, separate frames, alignment and text direction are preserved in faithful-repair mode.
+- Texture/effects and font substitutions are explicitly reviewed; unresolved changes mean partial/failed fidelity.
+- Region manifest was fixed before repair; unexpected outside-region changes were investigated.
+- File validity, text accuracy and visual fidelity are reported separately. Automated package checks cannot approve visual quality.
+
 ## Text Checks
 
 - Important text uses confirmed copy when accuracy matters.
@@ -28,11 +36,11 @@ Run these checks before presenting final deliverables. The goal is to catch ordi
 
 - PNG resolution matches the requested scale, such as 3x.
 - `publish-4k.png` has a long edge of at least 4096px when 4K was requested.
-- PDF opens and keeps vector text/shapes sharp where applicable.
+- PDF opens and keeps vector text/shapes sharp where applicable. Browser filters may rasterize text: inspect PDF font/path/image structure before promising vector text. SVG editability alone does not prove PDF editability.
 - SVG or HTML source references local assets correctly.
 - File names match the expected output package.
 
-Use `scripts/qa_artwork.js` for mechanical package checks:
+Use `scripts/qa_artwork.js` for mechanical package checks. It writes `qa-mechanical.json` and `qa-mechanical.md`, never the manual `qa-report.md`:
 
 ```bash
 npm run qa -- output --min-long-edge 4096 --require publish-4k.png,print.pdf

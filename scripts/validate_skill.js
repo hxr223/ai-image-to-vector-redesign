@@ -46,6 +46,8 @@ function checkRequiredFiles(root) {
     "README.md",
     "agents/openai.yaml",
     "references/text-confirmation.md",
+    "references/faithful-repair.md",
+    "scripts/review_regions.js",
     "references/export-presets.md",
     "references/qa-checklist.md",
     "templates/poster.html",

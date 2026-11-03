@@ -79,7 +79,7 @@ function hasSource(outDir) {
 }
 
 function writeMarkdownReport(outDir, issues, notes) {
-  const status = issues.length ? "Needs attention" : "Passed";
+  const status = issues.length ? "File checks failed" : "File checks passed; visual/text review pending";
   const body = `# QA Report
 
 ## Status
@@ -102,7 +102,7 @@ ${issues.length ? issues.map((issue) => `- ${issue}`).join("\n") : "- None found
 - Inspect full composition for white borders, cropping, asset loading, and source-text ghosts.
 - Inspect text-detail crops when small copy matters.
 `;
-  fs.writeFileSync(path.join(outDir, "qa-report.md"), body);
+  fs.writeFileSync(path.join(outDir, "qa-mechanical.md"), body);
 }
 
 function main() {
@@ -128,7 +128,8 @@ function main() {
   checkPngs(outDir, args.minLongEdge, args.require, issues, notes);
   writeMarkdownReport(outDir, issues, notes);
 
-  const result = { status: issues.length ? "failed" : "passed", issues, notes };
+  const result = { status: issues.length ? "failed" : "passed", scope: "file-checks-only", textStatus: "not-checked", visualFidelityStatus: "not-checked", issues, notes };
+  fs.writeFileSync(path.join(outDir, "qa-mechanical.json"), JSON.stringify(result, null, 2) + "\n");
   console.log(JSON.stringify(result, null, 2));
   if (issues.length) process.exitCode = 1;
 }

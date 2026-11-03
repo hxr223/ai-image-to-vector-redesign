@@ -98,6 +98,14 @@ ln -s "$PWD" ~/.codex/skills/ai-image-to-vector-redesign
 
 如果图里有日期、金额、人名、法律声明或品牌文案，先给最终文案，或让 Agent 生成 `confirmed-text.md` 后人工确认。
 
+## 保真修复（默认）
+
+默认保持原图的构图、背景、字牌数量、文字方向与装饰，只在标注区域清版和原位重排。需要改版时明确指定“自由重设计”。复杂插画可保留位图；不可把大面板遮字或裁掉装饰当作保真修复。
+
+先建立 `regions.json`（原图像素坐标），使用 `npm run review-regions -- original.png regions.json output/review` 检查标注。完整前后对比使用 `npm run compare -- original.png output/publish-4k.png --full --out-compare output/comparison.png`。
+
+文件检查输出 `qa-mechanical.json` / `qa-mechanical.md`，不会覆盖人工 `qa-report.md`。文件检查通过不代表文案、字体材质或视觉保真通过。详细流程见 [保真修复](references/faithful-repair.md)。
+
 ## 工作方式
 
 整个流程分四步：

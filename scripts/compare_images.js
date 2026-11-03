@@ -10,6 +10,7 @@ function usage() {
 Create a problem crop and side-by-side detail comparison.
 
 Options:
+  --full                  Compare full canvases (exclusive with --crop)
   --crop <x,y,w,h>          Crop rectangle from both images. Default: center crop
   --out-crop <file>         Problem crop path. Default: problem-crop.png
   --out-compare <file>      Comparison path. Default: detail-comparison.png
@@ -33,6 +34,7 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i += 1) {
     const value = argv[i];
     if (value === "--help" || value === "-h") args.help = true;
+    else if (value === "--full") args.full = true;
     else if (value === "--crop") args.crop = argv[++i];
     else if (value === "--out-crop") args.outCrop = argv[++i];
     else if (value === "--out-compare") args.outCompare = argv[++i];
@@ -87,8 +89,8 @@ async function imageSize(page, filePath) {
   }), imageDataUrl(filePath));
 }
 
-async function makeComparison(page, beforePath, afterPath, crop, labels) {
-  return page.evaluate(async ({ beforeSrc, afterSrc, crop, labels }) => {
+async function makeComparison(page, beforePath, afterPath, crop, labels, full) {
+  return page.evaluate(async ({ beforeSrc, afterSrc, crop, labels, full }) => {
     function load(src) {
       return new Promise((resolve, reject) => {
         const image = new Image();
@@ -100,7 +102,7 @@ async function makeComparison(page, beforePath, afterPath, crop, labels) {
 
     const before = await load(beforeSrc);
     const after = await load(afterSrc);
-    const naturalCrop = crop || {
+    const naturalCrop = full ? {x: 0, y: 0, width: before.naturalWidth, height: before.naturalHeight} : crop || {
       x: Math.round(before.naturalWidth * 0.12),
       y: Math.round(before.naturalHeight * 0.58),
       width: Math.round(before.naturalWidth * 0.76),
@@ -155,6 +157,7 @@ async function makeComparison(page, beforePath, afterPath, crop, labels) {
     beforeSrc: imageDataUrl(beforePath),
     afterSrc: imageDataUrl(afterPath),
     crop,
+    full,
     labels
   });
 }
@@ -182,16 +185,20 @@ async function main() {
   if (!fs.existsSync(beforePath)) throw new Error(`Before image not found: ${beforePath}`);
   if (!fs.existsSync(afterPath)) throw new Error(`After image not found: ${afterPath}`);
 
+  if (args.full && args.crop) throw new Error("--full and --crop are exclusive");
   const { chromium } = requirePlaywright();
   const browser = await chromium.launch(browserLaunchOptions());
+  let beforeSize, crop, result;
+  try {
   const page = await browser.newPage();
-  const beforeSize = await imageSize(page, beforePath);
-  const crop = parseCrop(args.crop);
-  const result = await makeComparison(page, beforePath, afterPath, crop, {
+  beforeSize = await imageSize(page, beforePath);
+  crop = parseCrop(args.crop);
+  if (crop && (crop.x < 0 || crop.y < 0 || crop.width <= 0 || crop.height <= 0 || crop.x + crop.width > beforeSize.width || crop.y + crop.height > beforeSize.height)) throw new Error("Crop is outside source bounds");
+  result = await makeComparison(page, beforePath, afterPath, crop, {
     before: args.labelBefore,
     after: args.labelAfter
-  });
-  await browser.close();
+  }, args.full);
+  } finally { await browser.close(); }
 
   writeDataUrl(path.resolve(args.outCrop), result.cropDataUrl);
   writeDataUrl(path.resolve(args.outCompare), result.compareDataUrl);
@@ -199,7 +206,7 @@ async function main() {
     before: beforePath,
     after: afterPath,
     beforeSize,
-    crop: crop || "auto",
+    crop: args.full ? "full" : crop || "auto",
     files: [path.resolve(args.outCrop), path.resolve(args.outCompare)]
   }, null, 2));
 }

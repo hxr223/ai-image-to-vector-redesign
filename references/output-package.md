@@ -30,3 +30,5 @@ When exact text was not confirmed:
 ```text
 Some text was visually approximated because final copy was not provided.
 ```
+
+For faithful repair also retain `regions.json`, the numbered region annotation and a full-canvas `comparison.png`. Automated QA writes `qa-mechanical.json` / `qa-mechanical.md`; keep independent text/fidelity findings in `qa-report.md`.

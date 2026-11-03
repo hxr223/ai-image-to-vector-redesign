@@ -7,7 +7,7 @@ description: Finish flattened GPT Image 2 design outputs by rebuilding text and 
 
 Use this skill when the user wants a GPT Image 2 output or similar AI-generated design made clearer, editable, scalable, or suitable for real publishing.
 
-This is a design reconstruction workflow, not a generic vectorizer. Treat the source image as a visual reference for a new maintainable artwork source.
+This is a design reconstruction workflow, not a generic vectorizer. Default to faithful repair: preserve the source composition while making the requested regions sharp and editable. Redesign only when the user asks for it.
 
 ## Core Promise
 
@@ -17,6 +17,14 @@ GPT Image 2 can produce beautiful flattened concepts. This skill turns those con
 - Redraw layout elements as vector shapes.
 - Preserve complex image regions as embedded raster assets when vector tracing would degrade them.
 - Export practical files for publishing, sharing, review, and future edits.
+
+## Fidelity Contract
+
+In faithful repair, preserve canvas, full background, illustration footprint, element count, text direction, alignment, and decorative frames. Keep separate text plaques separate. Do not replace textured lettering with plain text without recording the material loss. Text accuracy does not authorize a new composition.
+
+Before editing, map confirmed copy to source-pixel regions in `regions.json`; read [references/faithful-repair.md](references/faithful-repair.md). Render numbered region boxes with `scripts/review_regions.js` and inspect them. Never infer original coordinates directly from a resized preview.
+
+Prefer the full original as the raster base, clean only individual text interiors, then place real text back into those same regions. Preserve existing frames and texture. If local cleaning is unreliable, report the region as unresolved; do not hide it with a larger panel, crop away decorations, or rebuild the background to make the task easier.
 
 ## First Inspection
 
@@ -51,7 +59,7 @@ Choose the least noisy strategy for each region:
 - Use embedded raster assets for photos, product images, painterly backgrounds, detailed illustrations, complex logos, and visual regions that do not need editing.
 - Use a hybrid result when the design combines editable text/layout with complex background imagery.
 - Avoid full-image vector tracing for AI posters or scenic backgrounds; it usually creates noisy paths and does not fix text.
-- Prioritize readable, non-overlapping text over pixel-perfect imitation of malformed source details.
+- Repair malformed glyphs while retaining their text region and style. Adjust within the original region; if confirmed copy cannot fit, expose that conflict rather than silently moving other elements.
 
 For region-level decisions, read [references/reconstruction-strategy.md](references/reconstruction-strategy.md).
 
@@ -87,7 +95,8 @@ Do not present this skill as photographic super-resolution, OCR certainty, or fu
 3. Decide which regions are vector reconstruction and which remain embedded raster.
 4. Rebuild the artwork with maintainable SVG or HTML/CSS that can export SVG/PNG/PDF.
 5. Export the chosen deliverables with the correct aspect ratio and scale.
-6. Run the visual checks in [references/qa-checklist.md](references/qa-checklist.md) before presenting the result.
+6. Generate a full-canvas comparison (`compare --full`) and relevant detail crops. Check unchanged areas with `review_regions.js` when retaining a raster base. File checks, text checks, and visual fidelity have separate statuses; mechanical success never implies visual approval.
+7. Run the visual checks in [references/qa-checklist.md](references/qa-checklist.md) before presenting the result.
 
 ## Export Notes
 
